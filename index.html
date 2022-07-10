@@ -23,11 +23,12 @@
             <div class="playerNameInput">
                 <div class="playerName">
                     <h4>Player:</h4>
-                    <input type="text">
+                    <input id ="playerName" type="text">
                 </div>
                 <div class="playerStatInput">
                     <h4>Stat:</h4>
-                    <select name="stat" id="stat">
+                    <select name="stat" id="statType">
+                        <option value="Select Stat">Select Stat</option>
                         <option value="Points">Points</option>
                         <option value="Rebounds">Rebounds</option>
                         <option value="Assists">Assists</option>
@@ -39,23 +40,29 @@
         <div class="overUnderContainer">
             <div class="overBet">
                 <h3>Over</h3>
-                <h4>Line:</h4><input type="text">
-                <h4>Odds:</h4><input type="number" name="overOdds" id="overOdds" min="1.05" max="3">
-                <h4>Bookmaker:</h4><input type="text">
+                <h4>Line:</h4><input id="overLine" type="number">
+                <h4>Odds:</h4><input type="number" name="overOdds" id="overOdds" min="1.05" max="3" tabindex="1" autofocus>
+                <h4>Bookmaker:</h4><input id="overBookmaker" type="text">
             </div>
             <div class="underBet">
                 <h3>Under</h3>
-                <h4>Line:</h4><input type="text">
-                <h4>Odds:</h4><input type="number" name="underOdds" id="underOdds" min="1.05" max="3">
-                <h4>Bookmaker:</h4><input type="text">
+                <h4>Line:</h4><input id="underLine" type="number">
+                <h4>Odds:</h4><input itemid="underOdds" type="number" name="underOdds" id="underOdds" min="1.05" max="3" tabindex="2">
+                <h4>Bookmaker:</h4><input id="underBookmaker" type="text">
             </div>
         </div>
-        <button>Calculate</button>
+        <button id="calculateButton">Calculate</button>
     </div>
+    <p id="recordBetComment"></p>
     <!-- Output -->
-    <div class="middleStats">
+    <div id="middleStats">
         <h3>Middle Info</h4>
         <p id="middleInfo">The Over Line needs to be larger than the Under Line</p>
+        <div id="middleStatButtonContainer">
+            <h4>Max Stake:</h4>
+            <input type="number" id="maxStake"><br>
+            <button id="recordButton">Record Bet</button>
+        </div>
     </div>
 </body>
 <!-- JS Script -->

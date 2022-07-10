@@ -86,29 +86,62 @@ select, input {
     border: 2px solid #FF564E;
 }
 
-button {
+#calculateButton {
     border: 2px solid #FF564E;
     text-align: center;
     width: 380px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-button:hover {
+#calculateButton:hover {
     background-image: linear-gradient(90deg, #FAD126, #FF564E);
 }
 
-.middleStats {
+#recordButton {
+    border: 2px solid #FAD126;
+    text-align: center;
+    width: 330px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#recordButton:hover {
+    background-image: linear-gradient(90deg, #FAD126, #FF564E);
+}
+
+#middleStats {
     border: 2px solid #FAD126;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
-    width: 360px;
+    width: 356px;
+    visibility: hidden;
+}
+
+#middleStatButtonContainer {
+    display: none;
+}
+
+#recordBetComment {
+    color: red;
+}
+
+.betInfoSpan {
+    background:white;
+    color: black;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 5px;
+    border-radius: 5px;
 }
