@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle Calculator</title>
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>Middle Calculator</h1>
+    </header>
+    <!-- Input -->
+    <div id="middleInputcontainer">
+        <div class="playerStatHeadingContainer">
+            <h3>Bet Details</h3>
+            <div class="playerNameInput">
+                <div class="playerName">
+                    <h4>Player:</h4>
+                    <input type="text">
+                </div>
+                <div class="playerStatInput">
+                    <h4>Stat:</h4>
+                    <select name="stat" id="stat">
+                        <option value="Points">Points</option>
+                        <option value="Rebounds">Rebounds</option>
+                        <option value="Assists">Assists</option>
+                        <option value="3 Pointers">3 Pointers</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="overUnderContainer">
+            <div class="overBet">
+                <h3>Over</h3>
+                <h4>Line:</h4><input type="text">
+                <h4>Odds:</h4><input type="number" name="overOdds" id="overOdds" min="1.05" max="3">
+                <h4>Bookmaker:</h4><input type="text">
+            </div>
+            <div class="underBet">
+                <h3>Under</h3>
+                <h4>Line:</h4><input type="text">
+                <h4>Odds:</h4><input type="number" name="underOdds" id="underOdds" min="1.05" max="3">
+                <h4>Bookmaker:</h4><input type="text">
+            </div>
+        </div>
+        <button>Calculate</button>
+    </div>
+    <!-- Output -->
+    <div class="middleStats">
+        <h3>Middle Info</h4>
+        <p id="middleInfo">The Over Line needs to be larger than the Under Line</p>
+    </div>
+</body>
+<!-- JS Script -->
+<script src="./Assets/JS/script.js"></script>
+</html>
